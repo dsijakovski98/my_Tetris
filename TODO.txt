@@ -1,0 +1,11 @@
+Clean up json file [x]
+Clean up tetromino constructor [x]
+
+Implement functions:
+    - canMoveDown() [x]
+    - canMove(dir) [x]
+
+Implement line clearing:
+    - UPDATE FALLEN TABLE []
+
+Style []
