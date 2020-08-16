@@ -27,7 +27,7 @@ class Block {
         let myX = (x + this.x) / scl;
         let myY = (y + this.y) / scl;
 
-        if(myX + dir >= w || myX + dir < 0 || board.grid[myY][myX + dir] == 1) {
+        if(myX + dir >= w - offsetDisplay || myX + dir < offsetDisplay || board.grid[myY][myX + dir] == 1) {
             return false;
         }
         return true;

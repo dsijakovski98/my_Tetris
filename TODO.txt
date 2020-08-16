@@ -6,6 +6,12 @@ Implement functions:
     - canMove(dir) [x]
 
 Implement line clearing:
-    - UPDATE FALLEN TABLE []
+    - UPDATE FALLEN TABLE [x]
 
-Style []
+Check rotation [x]
+
+Style:
+    - Reduce grid table [x]
+    - Display next piece [x]
+    - Display score [x]
+    - Style page w/ bootstrap []

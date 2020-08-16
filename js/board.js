@@ -4,7 +4,13 @@ class Board {
         for(let i = 0; i < h; i++) {
             this.grid[i] = [];
             for(let j = 0; j < w; j++) {
-                this.grid[i][j] = 0;
+                if(j < offsetDisplay || j >= w - offsetDisplay) {
+                    this.grid[i][j] = 1;
+                }
+                else {
+                    this.grid[i][j] = 0;
+                }
+                // this.grid[i][j] = 0;
             }
         }
         this.blocks = [];
@@ -34,7 +40,6 @@ class Board {
     update(lines) {
         for(let i = lines.length - 1; i >= 0; i--) {
             let row = lines[i];
-            console.log("Updating for row: " + row);
             for(let i = 0; i < this.blocks.length; i++) {
                 let b = this.blocks[i];
                 let pos = (b.posY + b.block.y) / scl;
@@ -58,7 +63,6 @@ class Board {
             }
 
             if(line){
-                console.log("LINE CLEARED: " + row + " row.");
                 lines.push(row);
             }
         }
@@ -97,7 +101,8 @@ class Board {
     }
 
     checkEnd() {
-        if(this.grid[0].includes(1)){
+        let s = this.grid[0].slice(offsetDisplay, w - offsetDisplay);
+        if(s.includes(1)){
             gameOver = true;
         }
     }
